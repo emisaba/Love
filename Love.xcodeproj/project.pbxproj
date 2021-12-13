@@ -18,6 +18,8 @@
 		829947A627526A7200B04789 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829947A527526A7100B04789 /* CaseViewController.swift */; };
 		829947A82752901300B04789 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829947A72752901100B04789 /* HeaderView.swift */; };
 		829947AA27533C1700B04789 /* CardTransiontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829947A927533C1600B04789 /* CardTransiontManager.swift */; };
+		82B9CF11276777280081985D /* UITextView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9CF10276777280081985D /* UITextView + Extension.swift */; };
+		82B9CF1527677EDF0081985D /* CaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9CF1427677EDF0081985D /* CaseViewCell.swift */; };
 		82D642462766EBE900346190 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D642452766EBE700346190 /* UIColor + Extension.swift */; };
 		82D6424B2766F5C000346190 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6424A2766F5C000346190 /* UIFont + Extension.swift */; };
 		82D642542766FCAE00346190 /* Mamelon-4-Hi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82D642502766FCAD00346190 /* Mamelon-4-Hi-Regular.otf */; };
@@ -43,6 +45,8 @@
 		829947A527526A7100B04789 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		829947A72752901100B04789 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		829947A927533C1600B04789 /* CardTransiontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransiontManager.swift; sourceTree = "<group>"; };
+		82B9CF10276777280081985D /* UITextView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView + Extension.swift"; sourceTree = "<group>"; };
+		82B9CF1427677EDF0081985D /* CaseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewCell.swift; sourceTree = "<group>"; };
 		82D642452766EBE700346190 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		82D6424A2766F5C000346190 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		82D642502766FCAD00346190 /* Mamelon-4-Hi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mamelon-4-Hi-Regular.otf"; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				8299479927525A9F00B04789 /* Model */,
 				8299479A27525AB300B04789 /* ViewModel */,
 				8299479B27525ABD00B04789 /* View */,
+				82B9CF1327677EBC0081985D /* CaseVew */,
 				8299479C27525AC400B04789 /* Controller */,
 				8299479E27525AD400B04789 /* Utils */,
 				8299479D27525ACC00B04789 /* API */,
@@ -128,9 +133,7 @@
 		8299479B27525ABD00B04789 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8299479F27525CA500B04789 /* TopViewControllerCell.swift */,
-				829947A327525FF300B04789 /* FeaturesCell.swift */,
-				829947A72752901100B04789 /* HeaderView.swift */,
+				82B9CF1227677EAB0081985D /* TopView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,7 +157,6 @@
 		8299479E27525AD400B04789 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				829947A127525D2800B04789 /* UIView + Extension.swift */,
 				829947A927533C1600B04789 /* CardTransiontManager.swift */,
 				82D642472766F55B00346190 /* Font */,
 				82D642442766EBC300346190 /* Extension */,
@@ -162,12 +164,32 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		82B9CF1227677EAB0081985D /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				8299479F27525CA500B04789 /* TopViewControllerCell.swift */,
+				829947A327525FF300B04789 /* FeaturesCell.swift */,
+				829947A72752901100B04789 /* HeaderView.swift */,
+			);
+			path = TopView;
+			sourceTree = "<group>";
+		};
+		82B9CF1327677EBC0081985D /* CaseVew */ = {
+			isa = PBXGroup;
+			children = (
+				82B9CF1427677EDF0081985D /* CaseViewCell.swift */,
+			);
+			path = CaseVew;
+			sourceTree = "<group>";
+		};
 		82D642442766EBC300346190 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				829947A127525D2800B04789 /* UIView + Extension.swift */,
 				82D642452766EBE700346190 /* UIColor + Extension.swift */,
 				82D6424A2766F5C000346190 /* UIFont + Extension.swift */,
 				82D642592766FFF500346190 /* UILabel + Extension.swift */,
+				82B9CF10276777280081985D /* UITextView + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -318,9 +340,11 @@
 			files = (
 				82D6424B2766F5C000346190 /* UIFont + Extension.swift in Sources */,
 				829947A027525CA500B04789 /* TopViewControllerCell.swift in Sources */,
+				82B9CF1527677EDF0081985D /* CaseViewCell.swift in Sources */,
 				8299478827525A5E00B04789 /* ShelfViewController.swift in Sources */,
 				8299478427525A5E00B04789 /* AppDelegate.swift in Sources */,
 				829947A627526A7200B04789 /* CaseViewController.swift in Sources */,
+				82B9CF11276777280081985D /* UITextView + Extension.swift in Sources */,
 				829947AA27533C1700B04789 /* CardTransiontManager.swift in Sources */,
 				82D6425A2766FFF500346190 /* UILabel + Extension.swift in Sources */,
 				829947A227525D2800B04789 /* UIView + Extension.swift in Sources */,

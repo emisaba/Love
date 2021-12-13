@@ -6,9 +6,9 @@ class FeaturesCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.layer.cornerRadius = 10
-        iv.backgroundColor = .systemGray
+        iv.image = #imageLiteral(resourceName: "pooh")
         return iv
     }()
     

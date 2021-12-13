@@ -16,9 +16,9 @@ class HeaderView: UIView {
         cv.delegate = self
         cv.register(FeaturesCell.self, forCellWithReuseIdentifier: identifier)
         cv.backgroundColor = .white
-        cv.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 10)
-        cv.layer.borderWidth = 5
-        cv.layer.borderColor = UIColor.lightGray.cgColor
+        cv.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+//        cv.layer.borderWidth = 5
+//        cv.layer.borderColor = UIColor.lightGray.cgColor
         return cv
     }()
     
@@ -104,10 +104,6 @@ extension HeaderView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return -5
     }
 }

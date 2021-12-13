@@ -13,6 +13,11 @@ class TopViewControllerCell: UICollectionViewCell {
         
         addSubview(headerView)
         headerView.fillSuperview()
+        
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.2
     }
     
     required init?(coder: NSCoder) {

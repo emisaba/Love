@@ -6,6 +6,16 @@ public struct AnchoredConstraints {
 
 extension UIView {
     
+    static func createShadouwView() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .white.withAlphaComponent(0.1)
+        view.layer.shadowColor = UIColor.lightGray.cgColor
+        view.layer.shadowRadius = 10
+        view.layer.shadowOffset = CGSize(width: 0, height: 0)
+        view.layer.shadowOpacity = 1
+        return view
+    }
+    
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
                 bottom: NSLayoutYAxisAnchor? = nil,

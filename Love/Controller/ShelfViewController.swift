@@ -12,7 +12,7 @@ class ShelfViewController: UIViewController {
         cv.delegate = self
         cv.dataSource = self
         cv.register(TopViewControllerCell.self, forCellWithReuseIdentifier: identifier)
-        cv.backgroundColor = .white
+        cv.backgroundColor = .white.withAlphaComponent(0.95)
         return cv
     }()
     
